@@ -1,3 +1,9 @@
+<nav class="navbar navbar-light bg-dark">
+  <form class="form-inline">
+    <button class="btn btn-sm btn-outline-danger col-md-12 d-flex justify-content-end" type="button" (click)='sair()'>Sair</button>
+  </form>
+</nav>
+
 <div class="container-fluid">
 
     <div class="col-md-12 justify-content-center">
@@ -23,6 +29,6 @@
         <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Campo obrigatório">
       </div>
       <div class="d-flex justify-content-center">
-        <button type="submit" class="btn-success">Cadastrar</button>
+        <button type="submit" class="btn-success" (click)='cadastrar()'>Cadastrar</button>
     </div>
   </form>

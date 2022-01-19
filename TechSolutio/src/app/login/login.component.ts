@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
           environment.id = this.UsuarioLoginDTO.idUsuario
 
      
-        this.router.navigate(['/cadastro-produto'])
+        this.router.navigate(['/cadastro-produtos'])
     }, (erro: { status: number; }) =>{
       if(erro.status == 500){
         alert('Usuário ou senha estão incorretos')
