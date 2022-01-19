@@ -4,14 +4,17 @@ import {HttpClientModule} from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
-import { ListaProdutosComponent } from './lista-produtos/lista-produtos.component';
+import { ListaProdutosComponent } from './listadeprodutos/listadeprodutos.component';
 import { CadastroProdutosComponent } from './cadastro-produtos/cadastro-produtos.component';
+import { FormsModule } from '@angular/forms';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
+    CadastroProdutosComponent,
     ListaProdutosComponent,
     CadastroProdutosComponent,
     
@@ -20,9 +23,13 @@ import { CadastroProdutosComponent } from './cadastro-produtos/cadastro-produtos
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [{
+    provide: LocationStrategy,
+    useClass: HashLocationStrategy
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

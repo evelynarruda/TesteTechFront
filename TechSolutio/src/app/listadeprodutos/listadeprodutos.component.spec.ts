@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ListaProdutosComponent } from './lista-produtos.component';
+import { ListaProdutosComponent } from './listadeprodutos.component';
 
 describe('ListaProdutosComponent', () => {
   let component: ListaProdutosComponent;

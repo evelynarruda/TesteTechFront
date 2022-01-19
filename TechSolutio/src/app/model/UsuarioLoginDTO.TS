@@ -1,4 +1,9 @@
 export class UsuarioLoginDTO{
-    public email: string;
-    public senha: string;
+
+    public idUsuario: number;
+    public nomeUsuario: string;
+    public sobrenomeUsuario: string;
+    public emailUsuario: string;
+    public senhaUsuario: string;
+    public token: string;
 }
