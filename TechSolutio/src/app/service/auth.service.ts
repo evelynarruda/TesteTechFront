@@ -20,15 +20,15 @@ export class AuthService {
   ) { }
 
   login(credenciais: CredenciaisDTO): Observable<CredenciaisDTO> {
-    return this.http.put<CredenciaisDTO>('https://localhost:4200/api/v1/usuarios/login', credenciais)
+    return this.http.put<CredenciaisDTO>('http://localhost:8080/api/v1/usuarios/login', this.login)
   }
 
 usuarioById(id: number): Observable<UsuarioLogin>{
-  return this.http.get<UsuarioLogin>(`https://localhost:4200/api/v1/usuarios/todes`, this.token)
+  return this.http.get<UsuarioLogin>('http://localhost:8080/api/v1/usuarios/todes', this.token)
 }
 
 cadastrar(produto: ProdutoModel): Observable<ProdutoModel>{
-  return this.http.post<ProdutoModel>('localhost:4200/api/v1/produtos/cadastrar', produto)
+  return this.http.post<ProdutoModel>('http://localhost:8080/api/v1/produtos/cadastrar', this.cadastrar)
 }
 
 logado(){

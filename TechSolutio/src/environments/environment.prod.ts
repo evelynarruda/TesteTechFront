@@ -8,5 +8,6 @@ export const environment = {
   nomeProduto:'',
   idFornecedor: '',
   valor: '',
+  senha: '',
   id: 0
 };

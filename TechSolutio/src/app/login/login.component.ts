@@ -28,10 +28,9 @@ export class LoginComponent implements OnInit {
         this.UsuarioLoginDTO = resp
 
           environment.token = this.UsuarioLoginDTO.token
-          environment.nome = this.UsuarioLoginDTO.nomeUsuario
-          environment.sobrenome = this.UsuarioLoginDTO.sobrenomeUsuario
           environment.email = this.UsuarioLoginDTO.emailUsuario
-          environment.id = this.UsuarioLoginDTO.idUsuario
+          environment.senha = this.UsuarioLoginDTO.senhaUsuario
+         
 
      
         this.router.navigate(['/cadastro-produtos'])
